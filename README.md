@@ -35,9 +35,9 @@ Follow the instructions below to set up and run the service locally.
 
 - POST: http://localhost:8081/v1/create-quiz
 
-Header: 
+- Header: 
 Authorization: JWT-token   <!-- Use "JWT-token" as a token value -->
-Request body :
+- Request body :
 {
   "title": "Sample Quiz",
   "questions": [
@@ -58,17 +58,17 @@ Request body :
 
 - GET: http://localhost:8081/v1/get-quiz/:quizId  <!-- Use the quizId from the response of Create Quiz -->
 
-Header: 
+- Header: 
 Authorization: JWT-token   <!-- Use "JWT-token" as a token value -->
 
 # Submit Answer: 
 
 - POST: http://localhost:8081/v1/submit-answer
 
-Header: 
+- Header: 
 Authorization: JWT-token   <!-- Use "JWT-token" as a token value -->
 
-Request Body:
+- Request Body:
 {
   "quizId": "13657b6e-a26a-4e4c-9be1-2f9b017ef624", <!-- Use the quizId from the response of Get Quiz -->
   "questionId": "37369757-3ce3-4c85-b520-d0661504a8ce", <!-- Use the questionId from the response of get Quiz -->
@@ -81,6 +81,6 @@ Request Body:
 
 - GET: http://localhost:8081/v1/get-results/:quizId  <!-- Use the quizId from the response of Create Quiz -->
 
-Header: 
+- Header: 
 Authorization: JWT-token   <!-- Use "JWT-token" as a token value -->
 
