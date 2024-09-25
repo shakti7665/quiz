@@ -36,7 +36,7 @@ Follow the instructions below to set up and run the service locally.
 - POST: http://localhost:8081/v1/create-quiz
 
 - Header: 
-Authorization: JWT-token   <!-- Use "JWT-token" as a token value -->
+Authorization: ca83ee93-a179-4ef6-b9ad-681da35e2609   <!-- Use "ca83ee93-a179-4ef6-b9ad-681da35e2609" as a token value -->
 - Request body :
 {
   "title": "Sample Quiz",
@@ -59,14 +59,14 @@ Authorization: JWT-token   <!-- Use "JWT-token" as a token value -->
 - GET: http://localhost:8081/v1/get-quiz/:quizId  <!-- Use the quizId from the response of Create Quiz -->
 
 - Header: 
-Authorization: JWT-token   <!-- Use "JWT-token" as a token value -->
+Authorization: ca83ee93-a179-4ef6-b9ad-681da35e2609   <!-- Use "ca83ee93-a179-4ef6-b9ad-681da35e2609" as a token value -->
 
 # Submit Answer: 
 
 - POST: http://localhost:8081/v1/submit-answer
 
 - Header: 
-Authorization: JWT-token   <!-- Use "JWT-token" as a token value -->
+Authorization: ca83ee93-a179-4ef6-b9ad-681da35e2609   <!-- Use "ca83ee93-a179-4ef6-b9ad-681da35e2609" as a token value -->
 
 - Request Body:
 {
@@ -82,5 +82,5 @@ Authorization: JWT-token   <!-- Use "JWT-token" as a token value -->
 - GET: http://localhost:8081/v1/get-results/:quizId  <!-- Use the quizId from the response of Create Quiz -->
 
 - Header: 
-Authorization: JWT-token   <!-- Use "JWT-token" as a token value -->
+Authorization: ca83ee93-a179-4ef6-b9ad-681da35e2609   <!-- Use "ca83ee93-a179-4ef6-b9ad-681da35e2609" as a token value -->
 

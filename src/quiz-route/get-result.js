@@ -13,6 +13,7 @@ export const getResult = (req, res) => {
 
         res.json(userResults[userId][quizId]);
     } catch (error) {
-        console.error('ERROR: get getResult failed, ', JSON.stringify(error))
+        console.error('ERROR: get getResult failed, ', JSON.stringify(error));
+        return res.status(500).json({ message: `Something went Wrong ${JSON.stringify(error)}` });
     }
 }

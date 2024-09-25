@@ -24,7 +24,8 @@ export const createQuiz = (req, res) => {
 
         res.status(201).json({ message: 'Quiz created', quizId });
     } catch (error) {
-        console.error('ERROR: create quiz failed, ', JSON.stringify(error))
+        console.error('ERROR: create quiz failed, ', JSON.stringify(error));
+        return res.status(500).json({ message: `Something went Wrong ${JSON.stringify(error)}` });
     }
 
 };

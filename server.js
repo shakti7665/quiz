@@ -1,5 +1,9 @@
 import express from 'express';
 import { quizRoute } from './src/quiz-route/index.js';
+
+// Hardcoding values for example, It should be in .env or config files
+const AuthToken = process.env.AuthToken || "ca83ee93-a179-4ef6-b9ad-681da35e2609";
+
 const app = express();
 app.use(express.json());
 
@@ -12,7 +16,7 @@ app.use((req, res, next) => {
     // Authentication Logic can be added here , adding dummy example
     const token = req.headers.authorization;
     console.info("AUTH token: ", token);
-    if (token !== "JWT-token") {  // Verify JWT Token login can be added here
+    if (token !== AuthToken) {  // Verify JWT Token logic can be added here
         console.error(`UNAUTHORISED , Invalid Token: ${token}, so returning 403`)
         return res.status(401).send({ message: "UNAUTHORISED", status: "ERROR" })
     }

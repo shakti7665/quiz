@@ -55,6 +55,7 @@ export const submitAnswer = (req, res) => {
 
         res.json({ message: 'Answer submitted successfully', correct: isCorrect, correctOption: isCorrect ? undefined : question.correct_option });
     } catch (error) {
-        console.error('ERROR: submitAnswer failed, ', JSON.stringify(error))
+        console.error('ERROR: submitAnswer failed, ', JSON.stringify(error));
+        return res.status(500).json({ message: `Something went Wrong ${JSON.stringify(error)}` });
     }
 }

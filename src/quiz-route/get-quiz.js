@@ -20,6 +20,7 @@ export const getQuiz = (req, res) => {
 
         res.json(quizWithoutAnswers);
     } catch (error) {
-        console.error('ERROR: get quiz failed, ', JSON.stringify(error))
+        console.error('ERROR: get quiz failed, ', JSON.stringify(error));
+        return res.status(500).json({ message: `Something went Wrong ${JSON.stringify(error)}` });
     }
 }
